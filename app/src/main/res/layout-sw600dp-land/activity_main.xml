@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zatwierdz">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <EditText
+        android:id="@+id/miasto"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Miasto"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/szerokoscInput"
+        app:layout_constraintTop_toBottomOf="@+id/zmienCzas" />
+
+    <Switch
+        android:id="@+id/tempType"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="1012dp"
+        android:layout_marginTop="148dp"
+        android:text="C/F"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/miastaLista"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="570dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/miasto" />
+
+    <Button
+        android:id="@+id/dodajDoUlubionych"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="960dp"
+        android:layout_marginTop="73dp"
+        android:text="+"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="11dp"
+        android:text="Długość:"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dlugoscInput"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textDługość"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="11dp"
+        android:text="test"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/text6"
+        app:layout_constraintTop_toBottomOf="@+id/dlugoscInput" />
+
+    <TextView
+        android:id="@+id/text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="9dp"
+        android:text="Szerokość:"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/textDługość"
+        app:layout_constraintTop_toBottomOf="@+id/szerokoscInput" />
+
+    <TextView
+        android:id="@+id/textSzerokosc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="9dp"
+        android:text="test"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/text7"
+        app:layout_constraintTop_toBottomOf="@+id/szerokoscInput" />
+
+    <Button
+        android:id="@+id/zmienCzas"
+        android:layout_width="500dp"
+        android:layout_height="70dp"
+        android:text="odśwież teraz"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/menu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/szerokoscInput"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Szerokosc"
+        android:inputType="numberDecimal|numberSigned"
+        android:textSize="30dp"
+        app:layout_constraintStart_toEndOf="@+id/dlugoscInput"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
+
+    <TextView
+        android:id="@+id/obecnyCzas"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/zmienCzas"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/menu"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/zatwierdz"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="8dp"
+        android:text="Zatwierdź"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/szerokoscInput"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
+
+    <EditText
+        android:id="@+id/dlugoscInput"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Dlugosc"
+        android:inputType="numberDecimal|numberSigned"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

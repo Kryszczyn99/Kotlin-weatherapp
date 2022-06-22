@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/dodajDoUlubionych"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="612dp"
+        android:layout_marginTop="8dp"
+        android:text="+"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/obecnyCzas" />
+
+    <Spinner
+        android:id="@+id/miastaLista"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toEndOf="@+id/tempType"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <Switch
+        android:id="@+id/tempType"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="35dp"
+        android:text="C/F"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/miasto"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Miasto"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/szerokoscInput"
+        app:layout_constraintTop_toBottomOf="@+id/zmienCzas" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:layout_marginTop="216dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zatwierdz">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="34dp"
+        android:text="Szerokość: "
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/textDługość"
+        app:layout_constraintTop_toBottomOf="@+id/szerokoscInput" />
+
+    <Button
+        android:id="@+id/zmienCzas"
+        android:layout_width="500dp"
+        android:layout_height="70dp"
+        android:text="odśwież teraz"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/menu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/szerokoscInput"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Szerokosc"
+        android:inputType="numberDecimal|numberSigned"
+        android:textSize="30dp"
+        app:layout_constraintStart_toEndOf="@+id/dlugoscInput"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
+
+    <TextView
+        android:id="@+id/obecnyCzas"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="660dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zatwierdz" />
+
+    <Spinner
+        android:id="@+id/menu"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/zatwierdz"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="8dp"
+        android:text="Zatwierdź"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/szerokoscInput"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
+
+    <EditText
+        android:id="@+id/dlugoscInput"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Dlugosc"
+        android:inputType="numberDecimal|numberSigned"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="36dp"
+        android:text="Długość: "
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dlugoscInput" />
+
+    <TextView
+        android:id="@+id/textDługość"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="36dp"
+        android:text="test"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/dlugoscInput" />
+
+    <TextView
+        android:id="@+id/textSzerokosc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="34dp"
+        android:text="test"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/zatwierdz" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
